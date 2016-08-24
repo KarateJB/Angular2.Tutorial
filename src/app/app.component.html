@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container body-content">
+  <h3>
+    {{title}}
+  </h3>
+
+  <div class="form-group">
+    <div class="col-md-5">
+      <!--<input type="text" class="form-control" #searchKeyWord (keyUp)="keySearch(searchKeyWord.value)" />-->
+      <input type="text" class="form-control" #searchKeyWord (keyup)="keySearch($event)" />
+    </div>
+    <div class="col-md-2">
+      <input type="button" class="btn btn-success" value="Search" (click)="btnSearch(searchKeyWord.value)">
+    </div>
+  </div>
+
+<br>
+  <hr/>
+
+  <div *ngIf="deletedCustomer" class="alert alert-warning" role="alert">
+    <strong>Warning!</strong>
+    <span [innerHtml]="deletedCustomer.Name + ' was removed.'"></span>
+  </div>
+
+  <app-data [(local-data)]="dataService.data" [(keyWord)]="searchKeyWord.value" (delete-item)="showDeletedCust($event)"></app-data>
+</div>

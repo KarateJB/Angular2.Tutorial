@@ -1,0 +1,8 @@
+[{ "Name": "<b>JB</b>", "Phone": "0933XXXXXX", "My-age": 35 },
+   { "Name": "<b>Lily</b>", "Phone": "0910XXXXXX", "My-age": 18 },
+   { "Name": "<b>Leia</b>", "Phone": "N/A", "My-age": 3 },
+   { "Name": "<b>Darth vader</b>", "Phone": "02-1234567", "My-age": 28 },
+   { "Name": "<b>Hachi</b>", "Phone": "N/A", "My-age": 6 },
+   { "Name": "<b>Luke Skywalker</b>", "Phone": "02-5678901", "My-age": 10 },
+   { "Name": "<b>Anakin Skywalker</b>", "Phone": "0988ZZZZZZ", "My-age": 13 },
+   { "Name": "<b>Obi wan</b>", "Phone": "0912YYYYYY", "My-age":65 }]

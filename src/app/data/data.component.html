@@ -1,0 +1,33 @@
+<div>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <td class="col-md-1 text-center">SN</td>
+        <td class="col-md-3 text-center">Name</td>
+        <td class="col-md-3 text-center">Phone</td>
+        <td class="col-md-1 text-center">Age</td>
+        <td class="col-md-4 text-center"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let sn=index;">
+        <td>{{sn+1}}</td>
+        <td [innerHtml]="item.Name"></td>
+        <td>
+          <div [ngSwitch]="item.Phone">
+            <span *ngSwitchCase="'N/A'" style="color:darkgray">***********</span>
+            <span *ngSwitchDefault>{{item.Phone}}</span>
+          </div>
+        </td>
+        <td>
+          <span [ngClass]="{'age-green': item['My-age']<18, 'age-blue':item['My-age']>=18, 'age-orange':item['My-age']>60}">
+          {{item['My-age']}}
+          </span>
+        </td>
+        <td class="text-center">
+          <input type="button" class="btn btn-warning" value="Remove" (click)="deleteCustomer(item)" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
