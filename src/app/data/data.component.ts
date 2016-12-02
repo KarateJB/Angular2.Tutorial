@@ -1,5 +1,5 @@
-import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
-import {DataService} from './data.service'
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DataService } from './data.service'
 
 @Component({
   selector: 'app-data',
@@ -18,7 +18,7 @@ export class DataComponent implements OnInit {
 
   }
 
-  deleteCustomer(item:any){
+  deleteCustomer(item: any) {
     //emit data to parent
     this.emitDeleteCust.emit(item);
 
@@ -26,6 +26,28 @@ export class DataComponent implements OnInit {
     // var index = this.data.indexOf(item);
     // this.data.splice(index, 1);
     this.dataService.delete(item, this.keyWord);
+  }
+
+  chkClass(age: number) {
+    let newClass = {};
+    let title = 'age';
+    if (age < 18) {
+      newClass[title + '-green'] = true;
+      newClass[title + '-blue'] = false;
+      newClass[title + '-orange'] = false;
+    }
+    else if(age >=18 && age< 60 ){
+      newClass[title + '-green'] = false;
+      newClass[title + '-blue'] = true;
+      newClass[title + '-orange'] = false;
+    }
+    else{
+      newClass[title + '-green'] = false;
+      newClass[title + '-blue'] = true;
+      newClass[title + '-orange'] = false;
+    }
+
+    return newClass;
   }
 
 }

@@ -20,7 +20,8 @@
           </div>
         </td>
         <td>
-          <span [ngClass]="{'age-green': item['My-age']<18, 'age-blue':item['My-age']>=18, 'age-orange':item['My-age']>60}">
+          <!--<span [ngClass]="{'age-green': item['My-age']<18, 'age-blue':item['My-age']>=18, 'age-orange':item['My-age']>60}">-->
+          <span [ngClass]="chkClass(item['My-age'])">
           {{item['My-age']}}
           </span>
         </td>
