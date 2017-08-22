@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
-    this.title = "Customers";
+    this.title = "Customers"; //Add comment on Branch
     // this.defaultData = this.data = customers;
   };
 
